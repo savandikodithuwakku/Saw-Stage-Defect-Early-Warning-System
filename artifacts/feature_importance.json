@@ -1,0 +1,518 @@
+[
+  {
+    "feature": "PData.CutEnergy / std",
+    "importance": 0.1394
+  },
+  {
+    "feature": "PData.PEff / range",
+    "importance": 0.115
+  },
+  {
+    "feature": "Position / mean_abs_change",
+    "importance": 0.1049
+  },
+  {
+    "feature": "PData.PEff / std",
+    "importance": 0.0467
+  },
+  {
+    "feature": "PData.PEff / slope",
+    "importance": 0.0431
+  },
+  {
+    "feature": "Position / max_abs_change",
+    "importance": 0.0411
+  },
+  {
+    "feature": "Vib03.Kurtosis / iqr",
+    "importance": 0.0315
+  },
+  {
+    "feature": "Vib03.RMS / std",
+    "importance": 0.0286
+  },
+  {
+    "feature": "vVorschub / std",
+    "importance": 0.0223
+  },
+  {
+    "feature": "PData.PEff / mean_abs_change",
+    "importance": 0.0159
+  },
+  {
+    "feature": "Vib02.Skewness / slope",
+    "importance": 0.0152
+  },
+  {
+    "feature": "Vib02.RMS / mean_abs_change",
+    "importance": 0.0148
+  },
+  {
+    "feature": "Vib01.RMS / range",
+    "importance": 0.0133
+  },
+  {
+    "feature": "Vib01.Skewness / slope",
+    "importance": 0.0123
+  },
+  {
+    "feature": "Vib01.RMS / slope",
+    "importance": 0.0116
+  },
+  {
+    "feature": "Vib01.Peak / kurtosis",
+    "importance": 0.0115
+  },
+  {
+    "feature": "Vib03.RMS / iqr",
+    "importance": 0.0114
+  },
+  {
+    "feature": "vVorschub / slope",
+    "importance": 0.0112
+  },
+  {
+    "feature": "Vib03.RMS / range",
+    "importance": 0.0095
+  },
+  {
+    "feature": "Vib03.Skewness / slope",
+    "importance": 0.0092
+  },
+  {
+    "feature": "P_Vorschub / std",
+    "importance": 0.0088
+  },
+  {
+    "feature": "Vib03.Peak / std",
+    "importance": 0.0083
+  },
+  {
+    "feature": "Vib03.RMS / slope",
+    "importance": 0.0078
+  },
+  {
+    "feature": "Vib01.RMS / mean_abs_change",
+    "importance": 0.0078
+  },
+  {
+    "feature": "Vib03.Peak / slope",
+    "importance": 0.0071
+  },
+  {
+    "feature": "PData.PEff / max_abs_change",
+    "importance": 0.0067
+  },
+  {
+    "feature": "Vib01.Peak / iqr",
+    "importance": 0.0066
+  },
+  {
+    "feature": "Vib03.Kurtosis / std",
+    "importance": 0.0065
+  },
+  {
+    "feature": "PData.PEff / kurtosis",
+    "importance": 0.0062
+  },
+  {
+    "feature": "Vib01.RMS / std",
+    "importance": 0.0058
+  },
+  {
+    "feature": "PData.PEff / skew",
+    "importance": 0.0057
+  },
+  {
+    "feature": "PData.PEff / iqr",
+    "importance": 0.0057
+  },
+  {
+    "feature": "Vib01.Kurtosis / iqr",
+    "importance": 0.0056
+  },
+  {
+    "feature": "Vib03.Kurtosis / mean_abs_change",
+    "importance": 0.0056
+  },
+  {
+    "feature": "Vib02.RMS / std",
+    "importance": 0.0055
+  },
+  {
+    "feature": "Vib03.Peak / mean_abs_change",
+    "importance": 0.0054
+  },
+  {
+    "feature": "Vib01.Kurtosis / mean_abs_change",
+    "importance": 0.0048
+  },
+  {
+    "feature": "Vib01.CREST / std",
+    "importance": 0.0047
+  },
+  {
+    "feature": "PData.CutEnergy / mean_abs_change",
+    "importance": 0.0042
+  },
+  {
+    "feature": "Vib03.RMS / skew",
+    "importance": 0.0041
+  },
+  {
+    "feature": "Vib01.CREST / max_abs_change",
+    "importance": 0.004
+  },
+  {
+    "feature": "Vib01.RMS / skew",
+    "importance": 0.0037
+  },
+  {
+    "feature": "Position_Band / slope",
+    "importance": 0.0036
+  },
+  {
+    "feature": "Vib03.RMS / kurtosis",
+    "importance": 0.0036
+  },
+  {
+    "feature": "Vib01.Peak / std",
+    "importance": 0.0036
+  },
+  {
+    "feature": "Vib03.Kurtosis / slope",
+    "importance": 0.0036
+  },
+  {
+    "feature": "P_Vorschub / iqr",
+    "importance": 0.0035
+  },
+  {
+    "feature": "PData.CutEnergy / max_abs_change",
+    "importance": 0.0034
+  },
+  {
+    "feature": "Vib01.Peak / mean_abs_change",
+    "importance": 0.0033
+  },
+  {
+    "feature": "Vib03.CREST / iqr",
+    "importance": 0.0033
+  },
+  {
+    "feature": "Vib01.Kurtosis / skew",
+    "importance": 0.0032
+  },
+  {
+    "feature": "Vib02.RMS / kurtosis",
+    "importance": 0.0031
+  },
+  {
+    "feature": "Vib01.CREST / mean_abs_change",
+    "importance": 0.003
+  },
+  {
+    "feature": "Vib01.CREST / range",
+    "importance": 0.0029
+  },
+  {
+    "feature": "Vib02.CREST / iqr",
+    "importance": 0.0028
+  },
+  {
+    "feature": "PData.CutEnergy / skew",
+    "importance": 0.0028
+  },
+  {
+    "feature": "Vib03.CREST / range",
+    "importance": 0.0027
+  },
+  {
+    "feature": "P_Vorschub / mean_abs_change",
+    "importance": 0.0026
+  },
+  {
+    "feature": "Vib03.Skewness / mean_abs_change",
+    "importance": 0.0026
+  },
+  {
+    "feature": "Position / std",
+    "importance": 0.0026
+  },
+  {
+    "feature": "Vib02.RMS / skew",
+    "importance": 0.0025
+  },
+  {
+    "feature": "Vib01.Peak / slope",
+    "importance": 0.0025
+  },
+  {
+    "feature": "Vib03.CREST / std",
+    "importance": 0.0025
+  },
+  {
+    "feature": "Vib01.Kurtosis / kurtosis",
+    "importance": 0.0025
+  },
+  {
+    "feature": "Vib02.Skewness / kurtosis",
+    "importance": 0.0024
+  },
+  {
+    "feature": "vVorschub / range",
+    "importance": 0.0024
+  },
+  {
+    "feature": "P_Vorschub / slope",
+    "importance": 0.0024
+  },
+  {
+    "feature": "Vib01.Peak / skew",
+    "importance": 0.0024
+  },
+  {
+    "feature": "Vib01.CREST / iqr",
+    "importance": 0.0023
+  },
+  {
+    "feature": "vVorschub / mean_abs_change",
+    "importance": 0.0021
+  },
+  {
+    "feature": "Position / range",
+    "importance": 0.0021
+  },
+  {
+    "feature": "Vib02.CREST / mean_abs_change",
+    "importance": 0.0021
+  },
+  {
+    "feature": "Vib01.RMS / kurtosis",
+    "importance": 0.002
+  },
+  {
+    "feature": "Vib03.Peak / kurtosis",
+    "importance": 0.002
+  },
+  {
+    "feature": "vVorschub / max_abs_change",
+    "importance": 0.002
+  },
+  {
+    "feature": "Vib03.CREST / mean_abs_change",
+    "importance": 0.002
+  },
+  {
+    "feature": "Vib02.Kurtosis / mean_abs_change",
+    "importance": 0.002
+  },
+  {
+    "feature": "Vib02.RMS / slope",
+    "importance": 0.0019
+  },
+  {
+    "feature": "vVorschub / iqr",
+    "importance": 0.0019
+  },
+  {
+    "feature": "Vib03.Skewness / std",
+    "importance": 0.0019
+  },
+  {
+    "feature": "Vib01.Skewness / max_abs_change",
+    "importance": 0.0019
+  },
+  {
+    "feature": "Vib01.Kurtosis / std",
+    "importance": 0.0018
+  },
+  {
+    "feature": "Vib02.Peak / skew",
+    "importance": 0.0018
+  },
+  {
+    "feature": "Vib02.Skewness / max_abs_change",
+    "importance": 0.0018
+  },
+  {
+    "feature": "Vib02.CREST / std",
+    "importance": 0.0018
+  },
+  {
+    "feature": "Vib03.Peak / skew",
+    "importance": 0.0018
+  },
+  {
+    "feature": "PData.CutEnergy / kurtosis",
+    "importance": 0.0018
+  },
+  {
+    "feature": "Vib02.Kurtosis / std",
+    "importance": 0.0018
+  },
+  {
+    "feature": "Vib01.Skewness / range",
+    "importance": 0.0018
+  },
+  {
+    "feature": "Vib02.Skewness / mean_abs_change",
+    "importance": 0.0017
+  },
+  {
+    "feature": "Vib01.CREST / skew",
+    "importance": 0.0017
+  },
+  {
+    "feature": "Vib03.Skewness / skew",
+    "importance": 0.0017
+  },
+  {
+    "feature": "Vib02.Kurtosis / slope",
+    "importance": 0.0017
+  },
+  {
+    "feature": "Vib02.Skewness / skew",
+    "importance": 0.0017
+  },
+  {
+    "feature": "Vib02.Peak / mean_abs_change",
+    "importance": 0.0016
+  },
+  {
+    "feature": "Position_Band / std",
+    "importance": 0.0016
+  },
+  {
+    "feature": "Vib01.Kurtosis / slope",
+    "importance": 0.0016
+  },
+  {
+    "feature": "Vib03.CREST / kurtosis",
+    "importance": 0.0016
+  },
+  {
+    "feature": "Vib03.Skewness / iqr",
+    "importance": 0.0015
+  },
+  {
+    "feature": "Vib01.Skewness / std",
+    "importance": 0.0014
+  },
+  {
+    "feature": "Vib02.Peak / std",
+    "importance": 0.0013
+  },
+  {
+    "feature": "Vib01.Skewness / iqr",
+    "importance": 0.0013
+  },
+  {
+    "feature": "Vib02.CREST / slope",
+    "importance": 0.0013
+  },
+  {
+    "feature": "Vib03.CREST / skew",
+    "importance": 0.0013
+  },
+  {
+    "feature": "Vib01.CREST / kurtosis",
+    "importance": 0.0012
+  },
+  {
+    "feature": "Vib01.Skewness / mean_abs_change",
+    "importance": 0.0012
+  },
+  {
+    "feature": "vVorschub / kurtosis",
+    "importance": 0.0012
+  },
+  {
+    "feature": "Vib02.Peak / iqr",
+    "importance": 0.0012
+  },
+  {
+    "feature": "Vib02.Kurtosis / kurtosis",
+    "importance": 0.0012
+  },
+  {
+    "feature": "Vib01.CREST / slope",
+    "importance": 0.0011
+  },
+  {
+    "feature": "Vib02.Peak / kurtosis",
+    "importance": 0.0011
+  },
+  {
+    "feature": "vVorschub / skew",
+    "importance": 0.0011
+  },
+  {
+    "feature": "Vib02.Skewness / iqr",
+    "importance": 0.0011
+  },
+  {
+    "feature": "Position / skew",
+    "importance": 0.001
+  },
+  {
+    "feature": "Position / kurtosis",
+    "importance": 0.001
+  },
+  {
+    "feature": "Vib03.CREST / slope",
+    "importance": 0.0008
+  },
+  {
+    "feature": "Vib02.CREST / skew",
+    "importance": 0.0008
+  },
+  {
+    "feature": "Vib01.Skewness / kurtosis",
+    "importance": 0.0008
+  },
+  {
+    "feature": "Position / iqr",
+    "importance": 0.0008
+  },
+  {
+    "feature": "Vib03.Kurtosis / skew",
+    "importance": 0.0008
+  },
+  {
+    "feature": "Vib02.RMS / iqr",
+    "importance": 0.0007
+  },
+  {
+    "feature": "Vib03.Skewness / kurtosis",
+    "importance": 0.0007
+  },
+  {
+    "feature": "Vib02.Kurtosis / skew",
+    "importance": 0.0007
+  },
+  {
+    "feature": "Vib02.Kurtosis / iqr",
+    "importance": 0.0007
+  },
+  {
+    "feature": "Vib01.RMS / iqr",
+    "importance": 0.0007
+  },
+  {
+    "feature": "Vib01.Skewness / skew",
+    "importance": 0.0006
+  },
+  {
+    "feature": "Vib02.Peak / slope",
+    "importance": 0.0003
+  },
+  {
+    "feature": "Vib02.Skewness / std",
+    "importance": 0.0003
+  },
+  {
+    "feature": "Position_Band / skew",
+    "importance": 0.0001
+  }
+]

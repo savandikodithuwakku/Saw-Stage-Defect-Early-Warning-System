@@ -1,0 +1,1 @@
+[{"model":"Random Forest","recall":66.7,"precision":95.2,"f1":78.4,"roc_auc":91.4},{"model":"TCN challenger","recall":46.7,"precision":100.0,"f1":63.6,"roc_auc":76.2}]

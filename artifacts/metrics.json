@@ -1,0 +1,12 @@
+{
+  "recall":0.6666666667,
+  "precision":0.9523809524,
+  "f1":0.7843137255,
+  "roc_auc":0.9140740741,
+  "average_precision":0.8976316576,
+  "false_alarm_rate":0.0222222222,
+  "true_positive":20.0,
+  "false_negative":10.0,
+  "false_positive":1.0,
+  "true_negative":44.0
+}

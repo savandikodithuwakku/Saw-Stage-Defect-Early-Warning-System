@@ -1,11 +1,35 @@
+# Python
 .venv/
+venv/
+ENV/
 __pycache__/
 *.py[cod]
+*.pyo
+*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
 .ipynb_checkpoints/
+
+# Frontend / Node
 frontend/node_modules/
 frontend/dist/
+frontend/.vite/
 *.tsbuildinfo
 
-# Generated metadata and local notebook outputs
+# Local environment
+.env
+.env.*
+!.env.example
+
+# Generated data and logs
 meta/
-*.json
+*.joblib
+*.pkl
+*.h5
+*.hdf5
+*.log
+
+# OS/editor
+.DS_Store
+Thumbs.db
