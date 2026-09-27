@@ -1,0 +1,76 @@
+product_id,true_label,risk_score,flagged,outcome,saw_weight_pass,milling_qc_pass,milling_qc_known,active_duration_sec
+100101,0,0.11140145635615299,False,No hidden defect,True,True,True,74.0
+100102,0,0.09910266519586197,False,No hidden defect,True,True,True,73.0
+100103,0,0.2525225947442252,True,No hidden defect,True,True,True,72.0
+100104,0,0.1403615966926535,False,No hidden defect,True,True,True,72.0
+100201,0,0.08524565882422053,False,No hidden defect,True,True,True,72.0
+100202,0,0.07290184533120592,False,No hidden defect,True,True,True,72.0
+100203,0,0.04870706580043139,False,No hidden defect,True,True,True,72.0
+100204,0,0.19704154055327766,False,No hidden defect,True,True,True,72.0
+101101,0,0.025369398354015076,False,No hidden defect,True,False,True,49.0
+111703,0,0.1278814261364026,False,No hidden defect,False,True,True,52.0
+111801,0,0.1863508247164851,False,No hidden defect,False,True,True,52.0
+111803,0,0.1342687691933463,False,No hidden defect,False,True,True,52.0
+111901,0,0.1295986287744796,False,No hidden defect,False,True,True,52.0
+111902,0,0.20782585280906418,False,No hidden defect,False,True,True,52.0
+111903,0,0.17854851235603372,False,No hidden defect,False,True,True,52.0
+112501,0,0.08389146088843953,False,No hidden defect,False,True,True,51.0
+115502,0,0.055765907059224545,False,No hidden defect,False,True,True,52.0
+115504,0,0.04690118075248058,False,No hidden defect,False,True,True,52.0
+115602,0,0.01826436567731775,False,No hidden defect,False,True,True,52.0
+115603,0,0.03073071262805778,False,No hidden defect,False,True,True,51.0
+115604,0,0.028865119103693822,False,No hidden defect,False,True,True,51.0
+115701,0,0.008072440554607152,False,No hidden defect,False,False,True,52.0
+116704,0,0.012976281517234714,False,No hidden defect,False,True,True,51.0
+116802,0,0.047674563540021545,False,No hidden defect,False,True,True,51.0
+116803,0,0.02620840566215371,False,No hidden defect,False,True,True,51.0
+116804,0,0.06078189954626763,False,No hidden defect,False,True,True,51.0
+116901,0,0.006014007573364816,False,No hidden defect,False,False,True,51.0
+116902,0,0.024259787550357664,False,No hidden defect,False,False,True,51.0
+116903,0,0.01207655608866525,False,No hidden defect,False,False,True,51.0
+117904,1,0.5024815422229245,True,Hidden defect,True,False,True,54.0
+118001,1,0.5040523468278557,True,Hidden defect,True,False,True,54.0
+118004,1,0.36825658754849666,True,Hidden defect,True,False,True,53.0
+118101,1,0.635391515625373,True,Hidden defect,True,False,True,54.0
+121203,0,0.00871604064657914,False,No hidden defect,False,True,True,51.0
+121204,0,0.02168498112578241,False,No hidden defect,False,True,True,52.0
+121301,0,0.026567123227687398,False,No hidden defect,False,True,True,51.0
+121302,0,0.003693792097264438,False,No hidden defect,False,True,True,51.0
+121303,0,0.044340041251661674,False,No hidden defect,False,True,True,50.0
+121304,0,0.022274344683464987,False,No hidden defect,False,False,True,51.0
+121401,0,0.002,False,No hidden defect,False,True,True,52.0
+121402,0,0.019073201530574926,False,No hidden defect,False,True,True,51.0
+122403,0,0.07126061960627392,False,No hidden defect,False,True,True,53.0
+122404,0,0.04364459718449997,False,No hidden defect,False,True,True,52.0
+122501,0,0.08921480184068765,False,No hidden defect,False,True,True,52.0
+122503,0,0.03038835482247007,False,No hidden defect,False,True,True,52.0
+122504,0,0.016290857515758882,False,No hidden defect,False,True,True,52.0
+122602,0,0.019767527584207804,False,No hidden defect,False,False,True,51.0
+122703,0,0.0,False,No hidden defect,False,False,True,52.0
+122804,0,0.04524161508450827,False,No hidden defect,False,False,True,52.0
+122901,1,0.16246260493253098,False,Hidden defect,True,False,True,49.0
+122902,1,0.08739524096672618,False,Hidden defect,True,False,True,49.0
+122903,1,0.07945009097140408,False,Hidden defect,True,False,True,49.0
+122904,1,0.09592204534812285,False,Hidden defect,True,False,True,48.0
+123001,1,0.08333761248742858,False,Hidden defect,True,False,True,49.0
+123002,1,0.11302329727180023,False,Hidden defect,True,False,True,48.0
+123003,1,0.07454896919914342,False,Hidden defect,True,False,True,49.0
+123004,1,0.07460720392280079,False,Hidden defect,True,False,True,48.0
+123101,1,0.08103063181046252,False,Hidden defect,True,False,True,48.0
+123102,1,0.11465981346762277,False,Hidden defect,True,False,True,48.0
+123103,1,0.722836995580629,True,Hidden defect,True,False,True,78.0
+123104,1,0.35432293912107155,True,Hidden defect,True,False,True,103.0
+123201,1,0.8220186003976201,True,Hidden defect,True,False,True,77.0
+123202,1,0.5985769128776968,True,Hidden defect,True,False,True,76.0
+123203,1,0.8693570537208329,True,Hidden defect,True,False,True,76.0
+123204,1,0.5916816777748612,True,Hidden defect,True,False,True,76.0
+123301,1,0.35186221357542696,True,Hidden defect,True,False,True,75.0
+123302,1,0.4194673343279766,True,Hidden defect,True,False,True,75.0
+123503,1,0.6143310639446252,True,Hidden defect,True,False,True,74.0
+123504,1,0.36021373367957216,True,Hidden defect,True,False,True,74.0
+123601,1,0.8070207425639816,True,Hidden defect,True,False,True,74.0
+123602,1,0.5170098049684595,True,Hidden defect,True,False,True,73.0
+123603,1,0.567839263738173,True,Hidden defect,True,False,True,73.0
+123604,1,0.7477516548410209,True,Hidden defect,True,False,True,74.0
+123701,1,0.7108436691142734,True,Hidden defect,True,False,True,74.0
+123702,1,0.5461470543906078,True,Hidden defect,True,False,True,74.0
