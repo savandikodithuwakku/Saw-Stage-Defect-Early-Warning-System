@@ -1,15 +1,15 @@
-# Saw Stage Defect Early Warning System
+# Saw-Stage Defect Early Warning System
 
-Analysis tools and datasets for detecting quality issues in a saw manufacturing process. The project combines sawing process data with quality-control measurements to explore anomaly and rework patterns and derive specification bounds.
+An industrial quality-intelligence dashboard that identifies sawed parts at risk of failing during a later milling operation. It combines saw-process sensor data, quality-control records, engineered features, and a trained Random Forest model to provide an earlier inspection recommendation.
+
+**Project team and contributors:** [Manody Asmini](https://github.com/manodyasasmini), [J.V. Ransika](https://github.com/jv-ransika), [Dinith Rathnayaka](https://github.com/dinithrathnayaka23), and [Savandi Kodithuwakku](https://github.com/savandikodithuwakku).
 
 ## What This Project Does
 
-This project helps a manufacturing team identify sawed parts that may fail during a later milling operation. A part can pass the existing saw-weight inspection and still develop a downstream quality problem. The project uses data recorded during the saw operation to provide an earlier warning.
-
-In simple terms, the system:
+During manufacturing, a part can pass the existing saw-weight inspection and still fail during a later milling operation. This project analyses signals recorded while a part is being sawed, such as power, feed, position, and vibration, to identify patterns linked to downstream quality problems and provide an earlier warning.
 
 1. Reads sensor measurements collected while each part is being sawed.
-2. Extracts useful information from those measurements, such as power, feed, position, and vibration behavior.
+2. Extracts useful information from those measurements, including power, feed, position, and vibration behaviour.
 3. Uses a trained Random Forest model to calculate a risk score for each part.
 4. Recommends either `Continue` for a low-risk part or `Inspection recommended` for a part that should be checked before milling.
 5. Lets an operator investigate an individual part and view its sensor signals, model result, and historical quality outcome.
@@ -34,59 +34,175 @@ The dashboard is a demonstration and decision-support tool. It does not replace 
 - `sawing_field_keys.csv` - field descriptions for the sawing data.
 - `spezifikationsgrenze.csv` - specification limits used in the analysis.
 - `create_meta_jsons.py` - utility for calculating bounds and creating metadata JSON files.
-- `Oct_Octabits_Presentation.pdf` and `Oct_Octabits_Report.pdf` - project presentation and report.
 
 ## Getting Started
 
-1. Create and activate a Python environment.
+The project includes both a FastAPI backend and a Vite frontend. Follow the [installation](#installation) and [run the application](#run-the-application) instructions below to start the complete dashboard locally.
 
-   ```powershell
-   python -m venv .venv
-   .\.venv\Scripts\Activate.ps1
-   ```
+## Project Links
 
-2. Install the Python dependencies.
+| Resource | Link |
+| --- | --- |
+| Frontend dashboard | [`frontend/`](frontend/) |
+| Backend/API source | [`app/`](app/) |
+| Full GitHub repository | [Saw-Stage-Defect-Early-Warning-System](https://github.com/savandikodithuwakku/Saw-Stage-Defect-Early-Warning-System) |
+| API documentation | `http://127.0.0.1:8001/docs` when running locally |
 
-   ```powershell
-   python -m pip install -r requirements.txt
-   python -m pip install matplotlib seaborn jupyter ipykernel
-   ```
+## Features
 
-3. Start Jupyter or open `Oct_Octabits_Notebook.ipynb` in VS Code.
+### Dashboard and operator workflow
 
-   ```powershell
-   jupyter notebook
-   ```
+| Feature | Description |
+| --- | --- |
+| Overview dashboard | Summarises documented saw misalignments, saw-weight QC results, and later milling failures. |
+| Process workflow view | Shows the path from saw sensor data through active-cut extraction, feature engineering, Random Forest scoring, and the final decision. |
+| Product investigation | Searches for a product ID and displays its model result, risk score, recommendation, and historical outcome. |
+| Risk-based recommendation | Classifies parts as `Continue` or `Inspection recommended` using the configured risk threshold of `0.25`. |
+| Sensor signal charts | Displays active-cut Power, Feed, Position, and Vibration signals for the selected product. |
+| Historical QC context | Compares saw-weight QC, milling QC, and the known target outcome after the prediction. |
+| Model performance view | Reports precision, recall, accuracy, false-positive rate, F1-score, and the confusion matrix for the benchmark. |
+| Feature importance | Visualises the most influential engineered features used by the final Random Forest model. |
+| Loading and error states | Explains when dashboard data is loading or when the API is unavailable. |
 
-4. Select the virtual environment as the notebook kernel and run the cells from top to bottom.
+### Data and machine learning
 
-## Running the Dashboard
+| Feature | Description |
+| --- | --- |
+| Sensor-data analysis | Uses sampled saw-process measurements stored in HDF5 format. |
+| Active-cut extraction | Isolates measurements recorded while the saw is actively cutting. |
+| Feature engineering | Derives statistical process features from power, feed, position, and vibration signals. |
+| Random Forest prediction | Produces a risk score for each benchmark product. |
+| Benchmark evaluation | Stores exported metrics, model comparison results, feature importance, and benchmark predictions. |
+| Early-warning analysis | Provides metadata for understanding how early a potentially problematic part can be identified. |
+| Specification analysis | Supports healthy-process bounds and specification-limit metadata. |
 
-The dashboard consists of a FastAPI backend and a Vite frontend. Start each service in a separate PowerShell terminal from the project root.
+### Backend API
 
-### Backend
+| Endpoint | Purpose |
+| --- | --- |
+| `GET /api/overview` | Returns dashboard overview statistics. |
+| `GET /api/pipeline` | Returns the process pipeline stages. |
+| `GET /api/benchmark/metrics` | Returns benchmark model metrics and confusion-matrix values. |
+| `GET /api/benchmark/products` | Returns benchmark products and their predictions. |
+| `GET /api/model-comparison` | Returns model comparison metadata. |
+| `GET /api/model-features` | Returns the leading model features. |
+| `GET /api/early-warning` | Returns early-warning analysis data. |
+| `GET /api/business-value` | Returns business-value metadata. |
+| `GET /api/limitations` | Returns documented model limitations. |
+| `GET /api/predict/{product_id}` | Returns the prediction for one product. |
+| `GET /api/investigation/{product_id}` | Returns product details, QC context, and downsampled sensor signals. |
+
+## Technology Stack
+
+| Area | Technology | Role |
+| --- | --- | --- |
+| Frontend | React, TypeScript, Vite | Interactive dashboard and development server |
+| Frontend charts | Recharts | Sensor signal and model visualisations |
+| Frontend icons | Lucide React | Consistent interface icons |
+| Backend | FastAPI, Uvicorn | REST API and local ASGI server |
+| Data processing | Python, Pandas, NumPy, SciPy, h5py | Data loading, cleaning, and signal processing |
+| Machine learning | scikit-learn | Random Forest training and evaluation |
+| Model persistence | joblib | Exporting and loading the trained model |
+| Analysis | Jupyter Notebook | Exploratory analysis and investigation |
+
+## Repository Structure
+
+| Path | Purpose |
+| --- | --- |
+| `app/` | FastAPI application, schemas, data access, and product investigation logic |
+| `frontend/` | React/Vite dashboard source and frontend dependencies |
+| `artifacts/` | Exported model, metrics, benchmark products, metadata, and analysis results |
+| `scripts/train_and_export.py` | Trains the model and exports dashboard artifacts |
+| `Oct_Octabits_Notebook.ipynb` | Main exploratory analysis notebook |
+| `*.csv` | Process, quality-control, anomaly, field-key, and specification data |
+| `sampled_saw_process_data.h5` | Sampled saw-process sensor measurements |
+| `create_meta_jsons.py` | Generates process-bound and metadata JSON files |
+
+## Installation
+
+### Prerequisites
+
+- Python 3.10 or newer
+- Node.js and npm
+- Git
+- PowerShell on Windows, or an equivalent shell on macOS/Linux
+
+### 1. Clone the repository
+
+```powershell
+git clone https://github.com/savandikodithuwakku/Saw-Stage-Defect-Early-Warning-System.git
+Set-Location "Saw-Stage-Defect-Early-Warning-System"
+```
+
+### 2. Create the Python environment
+
+```powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+```
+
+For notebook-based analysis, install the optional analysis tools:
+
+```powershell
+python -m pip install matplotlib seaborn jupyter ipykernel
+```
+
+### 3. Install frontend dependencies
+
+```powershell
+Set-Location frontend
+npm install
+Set-Location ..
+```
+
+## Run the Application
+
+Start the backend and frontend in two separate terminals from the repository root.
+
+### Terminal 1: Backend/API
 
 ```powershell
 .\.venv\Scripts\Activate.ps1
 python -m uvicorn app.main:app --reload --port 8001
 ```
 
-The API is available at <http://127.0.0.1:8001> and its interactive documentation at <http://127.0.0.1:8001/docs>.
+Backend URLs:
 
-### Frontend
+- API: <http://127.0.0.1:8001>
+- Interactive API docs: <http://127.0.0.1:8001/docs>
+
+### Terminal 2: Frontend
 
 ```powershell
 Set-Location frontend
-npm install
 npm run dev
 ```
 
-Open <http://localhost:5173/> after both services are running. The frontend expects the backend at `http://127.0.0.1:8001/api`.
+Open <http://localhost:5173/> in a browser. The frontend is configured to request data from `http://127.0.0.1:8001/api`.
 
-## Generating Metadata
+## Run the Notebook
 
-`create_meta_jsons.py` calculates healthy-process bounds and reads specification limits. Before running it, update `DATASET_PATH` and `BASE_DIR` at the top of the file to point to the local dataset and metadata directories.
+```powershell
+jupyter notebook
+```
 
-## Data Notes
+Open `Oct_Octabits_Notebook.ipynb`, select the `.venv` Python environment as the kernel, and run the notebook cells from top to bottom.
 
-The repository contains research and manufacturing-quality datasets used for analysis. Check the source and usage permissions before redistributing the data or derived results.
+## Train and Export the Model
+
+The training workflow is in [`scripts/train_and_export.py`](scripts/train_and_export.py). It creates or updates the files in `artifacts/`, which are consumed by the backend and dashboard. Confirm that the required source datasets are available before running it.
+
+```powershell
+.\.venv\Scripts\Activate.ps1
+python scripts/train_and_export.py
+```
+
+## Data and Limitations
+
+The repository contains research and manufacturing-quality datasets. Confirm the source and usage permissions before redistributing the data or derived artifacts. The model is evaluated on a fixed benchmark and should be validated with representative production data before operational use. A high or low risk score is an aid to investigation, not proof that a part will pass or fail.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE). The license permits use, modification, distribution, and private or commercial use, subject to the conditions in the license text.
